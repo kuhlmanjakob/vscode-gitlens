@@ -106,7 +106,8 @@ import type { RemoteProvider } from '../../../git/remotes/remoteProvider';
 import type { RemoteProviders } from '../../../git/remotes/remoteProviders';
 import { getRemoteProviderMatcher, loadRemoteProviders } from '../../../git/remotes/remoteProviders';
 import type { RichRemoteProvider } from '../../../git/remotes/richRemoteProvider';
-import { SearchPattern } from '../../../git/search';
+import type { SearchPattern } from '../../../git/search';
+import { parseSearchOperations } from '../../../git/search';
 import { Logger } from '../../../logger';
 import type { LogScope } from '../../../logger';
 import {
@@ -1834,7 +1835,7 @@ export class LocalGitProvider implements GitProvider, Disposable {
 					author: commit.author,
 					email: commit.authorEmail ?? '',
 					date: Number(ordering === 'author-date' ? commit.authorDate : commit.committerDate) * 1000,
-					message: emojify(commit.message),
+					message: emojify(commit.message.trim()),
 					// TODO: review logic for stash, wip, etc
 					type: isStashCommit
 						? GitGraphRowType.Stash
@@ -2657,7 +2658,7 @@ export class LocalGitProvider implements GitProvider, Disposable {
 			const limit = options?.limit ?? configuration.get('advanced.maxSearchItems') ?? 0;
 			const similarityThreshold = configuration.get('advanced.similarityThreshold');
 
-			const operations = SearchPattern.parseSearchOperations(search.pattern);
+			const operations = parseSearchOperations(search.pattern);
 
 			const searchArgs = new Set<string>();
 			const files: string[] = [];
