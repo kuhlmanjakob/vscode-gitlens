@@ -11724,7 +11724,7 @@
 	"dependencies": {
 		"@gitkraken/gitkraken-components": "1.0.0-rc.14",
 		"@microsoft/fast-element": "^1.10.5",
-		"@octokit/core": "4.0.5",
+		"@octokit/core": "4.1.0",
 		"@vscode/codicons": "0.0.32",
 		"@vscode/webview-ui-toolkit": "1.0.1",
 		"ansi-regex": "6.0.1",
