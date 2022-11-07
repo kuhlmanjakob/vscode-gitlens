@@ -644,10 +644,10 @@
     playwright "^1.23.1"
     vscode-uri "^3.0.3"
 
-"@vscode/webview-ui-toolkit@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@vscode/webview-ui-toolkit/-/webview-ui-toolkit-1.0.1.tgz#1f094e447571ed28b1ac72eb8a5d99148c97aded"
-  integrity sha512-jitA17enYUoMadv9exoHJiYcBK+X+gTlUyyIFvXRrA/mhHrxZfel5Eh6z/u57UZScK/i0Sn7EtlEYV1ZKFbeHw==
+"@vscode/webview-ui-toolkit@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vscode/webview-ui-toolkit/-/webview-ui-toolkit-1.1.0.tgz#22d16bf2edcc9db73df5fca190abe12573b612f1"
+  integrity sha512-QXkt0Rc7LBo/KUjLFrbN1/kQc1YdACgz8KIjfERUN7C13kKzsCMl5mn812J7H4lPhsB5W58q7EkpkL6g3dVgXQ==
   dependencies:
     "@microsoft/fast-element" "^1.6.2"
     "@microsoft/fast-foundation" "^2.38.0"
